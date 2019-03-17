@@ -14,7 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+#from django.urls import path
+from django.conf.urls import url, include
 from rest_framework import routers
 from django.conf.urls import url, include
 from apps.accounts.views import CreateEmailUserViewSet, obtain_auth_token
@@ -28,7 +29,7 @@ router.register('movies', UserMoviesViewset, base_name='movies')
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    url('admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', obtain_auth_token),
 ]
