@@ -13,7 +13,7 @@ class MoviesSerializer(ModelSerializer):
     genre = GenreSerializer(required=False, many=True)
     class Meta:
         model = Movies
-        fields = ('name', 'director', 'imdb_score', 'popularity', 'genre')
+        fields = '__all__'
 
 
 class MoviesCreateSerializer(ModelSerializer):
