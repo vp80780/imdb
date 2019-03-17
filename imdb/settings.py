@@ -117,8 +117,8 @@ DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #         'NAME': 'imdb_movies',
-#         'USER': 'postgres',
-#         'PASSWORD': 'terse@123',
+#         'USER': 'your username',
+#         'PASSWORD': 'your password',
 #         'HOST': '127.0.0.1',
 #         'PORT': '5432',
 #     }
