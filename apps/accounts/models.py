@@ -34,6 +34,10 @@ class EmailUser(AbstractBaseUser, PermissionsMixin):
         verbose_name = _('user')
         verbose_name_plural = _('users')
 
+    def get_short_name(self):
+        "Returns the short name for the user."
+        return self.first_name
+
 
 from django.conf import settings
 from django.db.models.signals import post_save
